@@ -12,7 +12,7 @@ function calculateSum() {
         return;
     }
 
-    fetch(`http://localhost:3828/get?num1=${num1}&num2=${num2}`)
+    fetch(`https://arithmetic-service-jayasandeepketha.onrender.com/get?num1=${num1}&num2=${num2}`)
     .then(response => response.json())
     .then(data => {
         resultSpan.textContent = `Result: ${data.result}`;
