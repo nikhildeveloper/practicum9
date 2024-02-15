@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require('cors');
 const app = express();
 const port = 3828;
+const {add} = require("./arithmetica")
 
 // Serve static files from 'public' directory
 app.use(express.static('public'));
@@ -16,7 +17,7 @@ app.get('/get', (req, res) => {
         return res.status(400).json({ error: "Invalid numbers" });
     }
 
-    const result = num1 + num2;
+    const result = add(num1, num2);
     res.json({ result });
 });
 
@@ -24,3 +25,4 @@ app.get('/get', (req, res) => {
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
+
