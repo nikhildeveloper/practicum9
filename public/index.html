@@ -4,6 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arithmetic Calculator</title>
+  <style>
+    .column {
+       float: left;
+       width: 50%;
+       padding: 10px;
+       box-sizing: border-box;
+      
+    }
+    .row::after {
+       content: "";
+       clear: both;
+       display: table;
+    }
+ </style>
 </head>
 <body>
 
@@ -15,6 +29,23 @@
   <input type="number" id="num2" placeholder="Enter another number">
   <button onclick="calculateSum()">=</button>
   <span id="result"></span>
+</section>
+
+<section>
+      <h2>Prime check</h2>                
+      <label>Number to test:</label>
+      <input id="numberToTest"/>
+      <button onclick="isPrime()">Check</button>
+      <label id="primeCheckResult"></label>  
+
+</section>           
+      <h2> Caesar cipher </h2>                
+      <label>Text:</label>
+      <input id="inputText"/>
+      <button onclick="encode()">Cipher</button>
+      <label id="encodedText"></label>  
+<section>
+
 </section>
 
 <script src="./script.js"></script>
